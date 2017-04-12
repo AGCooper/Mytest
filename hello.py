@@ -14,11 +14,11 @@ def hello(name=None):
 
 @app.route('/projects/')
 def projects():
-    return "The project page"
+    return render_template('projects.html')
 
 @app.route('/about')
 def about():
-    return "The about page"
+    return render_template('about.html')
 
 with app.test_request_context():
     print url_for('static', filename='style.css')
